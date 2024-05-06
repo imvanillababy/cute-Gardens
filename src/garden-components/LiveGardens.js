@@ -37,7 +37,7 @@ const LiveGardens = () => {
       <h1 className="ssm:px-44 text-center text-[#10172A] text-4xl sm:text-6xl font-semibold tracking-tighter">Explore live spaces with cute
       <span className="underline leading-8 underline-offset-8	decoration-8 decoration-[#8B5CF6]">{" "}  Gardens</span></h1>
 
-    <div className="flex flex-wrap justify-center py-8 space-x-4 mt-16">
+    <div className="flex flex-wrap justify-center py-8 space-y-4 space-x-2 mt-16">
       {gardenData.map((livegarden) => (
         <div className="bg-white shadow-md  rounded-3xl p-4">
         <div className="flex-none lg:flex">
@@ -80,7 +80,7 @@ const LiveGardens = () => {
                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                   ></path>
                 </svg>
-                <p className="tracking-tighter text-[#151e37]">05-25-2021</p>
+                <p className="tracking-tighter text-[#151e37]">{new Date().toLocaleTimeString()}</p>
               </div>
             </div>
             <div className="flex p-4 pb-2 border-t border-gray-200 "></div>

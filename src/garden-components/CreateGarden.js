@@ -1,12 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
 
-import { db } from "./Firebase";
-import { collection, addDoc } from "firebase/firestore";
-
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-
-import { storage } from "./Firebase";
-import { v4 } from "uuid";
 
 const CreateGarden = () => {
   // State variables to hold input values
@@ -15,13 +8,28 @@ const CreateGarden = () => {
   const [gardenRestriction, setGardenRestriction] = useState("");
   const [tokenType, setTokenType] = useState("trc20");
   const [tokenAddress, setTokenAddress] = useState("");
-  const [imageFile, setImageFile] = useState("");
   const [link, setLink] = useState(null);
 
   const [selectedImage, setSelectedImage] = useState(null);
 
 
+  const tronLink = useMemo(() => {
+    return window.tronLink;
+  }, []);
 
+
+  const handleSignatureRequest = async () => {
+    try {
+      if (window.tronLink.ready) {
+        const tronweb = tronLink.tronWeb;
+        try {
+          const message =
+            "0x52eb47c176c307a1de2bb8c21f08051df3f2859d781ad30eb517a5ff07df7a8d"; // any hex string
+          await tronweb.trx.sign(message);
+        } catch (e) {}
+      }
+    } catch (e) {}
+  };
 
   const updateSessionStorage = () => {
 
@@ -45,6 +53,10 @@ const CreateGarden = () => {
       // Store the updated array in sessionStorage
       sessionStorage.setItem("allGardens", JSON.stringify(updatedArray));
 
+      setLink(
+        "http://localhost:3000/gardename?=" + garden.name + "uid?=" + "vvuikd573"
+      );
+
   };
 
 
@@ -52,6 +64,9 @@ const CreateGarden = () => {
 
   const handleGardenRegistration=()=>{
     updateSessionStorage()
+    handleSignatureRequest()
+
+
 
   }
 
@@ -79,40 +94,11 @@ const CreateGarden = () => {
 
 
 
-  // // useEffect hook to watch for changes in state variables and update sessionStorage
-  // useEffect(() => {
-  //   updateSessionStorage();
-  // }, [
-  //   gardenName,
-  //   gardenDescription,
-  //   gardenRestriction,
-  //   tokenType,
-  //   tokenAddress,
-  //   selectedImage,
-  // ]);
 
   return (
     <div className="bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] tracking-tighter">
       <div className="flex h-screen flex-col items-center justify-center">
         <div className="max-h-auto mx-auto max-w-3xl w-full">
-          {/* <div>
-            {garden===null ?
-            <></> :
-              garden.map((garden) => {
-                <div>
-                  <h1>{garden.gardenName}</h1>
-                  <img
-                    src={garden.selectedImage}
-                    alt="Uploaded Image"
-                    style={{
-                      maxWidth: "300px",
-                      maxHeight: "300px",
-                      marginTop: "20px",
-                    }}
-                  />
-                </div>;
-              })}
-          </div> */}
           <div className="mb-8 space-y-3">
             <p className="text-4xl font-semibold tracking-tighter text-[#151e37] ">
               Create Your Garden
@@ -234,10 +220,10 @@ const CreateGarden = () => {
               </div>
               <button
                 onClick={handleGardenRegistration}
-                className="rounded-md bg-[#8B5CF6] px-4 py-2  sm:text-lg text-sm font-semibold tracking-tighter text-white transition-colors  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+                className="rounded-md bg-[#8B5CF6] px-4 py-2  p-4 sm:text-lg text-sm font-semibold tracking-tighter text-white transition-colors  "
                 type="submit"
               >
-                Go live
+                Sign and Go live
               </button>
             </div>
           </div>
