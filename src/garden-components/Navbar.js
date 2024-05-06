@@ -67,7 +67,7 @@ const Navbar = () => {
               onClick={connectWallet}
               disabled={isConnecting}
               className={`rounded-md px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md transition-transform duration-200 ease-in-out hover:scale-[1.03] ${
-                address ? "bg-[#8B5CF6]" : "bg-[#6366F1]"
+                address ? "bg-[#8B5CF6]" : "bg-[#8B5CF6]"
               }`}
             >
               {isConnecting ? "Connecting..." : address ? "Connected" : "Connect Wallet"}

@@ -39,6 +39,12 @@ const GardenDetails = () => {
   }, []);
 
   const JoinSpace = () => {
+
+    if (filteredGarden[0].tokenType !== "open") {
+      alert("Oops you are not eligible to join this space");
+      return;
+    }
+
     if (listeners === '0') {
       setListeners('1');
     } else {
@@ -56,16 +62,8 @@ const GardenDetails = () => {
           <div className="bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] p-4 rounded-2xl shadow-md hover:shadow-lg">
             <div className="flex items-center text-gray-400">
               <FaShare color="#8B5CF6" className="mr-2" />
-              <p>
-                You can also invite your friends if eligible :){' '}
-                <a
-                  href="https://tailwindcomponents.com/u/aji"
-                  className="underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Invite
-                </a>
+              <p className=' tracking-tighter font-semibold'>
+                You can also invite your eligible friends with a link {' '}
               </p>
               <button
                 type="button"
@@ -142,7 +140,7 @@ const GardenDetails = () => {
           {filteredGarden.length > 0 && filteredGarden[0].tokenType !== 'open' && <Unauthorized />}
           <h1>{listeners} Listeners</h1>
           <div className="flex justify-start items-center">
-            {canjoin && <Join address={address} />}
+            {canjoin===true && <Join address={address} />}
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import cuteGarden from "../assets/cuteGardens.png"
 
 const Sign = () => {
 
@@ -39,7 +40,7 @@ const handleSignatureRequest = async () => {
               <div className="flex flex-col items-center justify-center max-w-xl gap-3 mx-auto lg:flex-row">
                 <img
                   className="w-32 h-32 rounded-full border border-[#E8E3F4]"
-                  src="https://i.pinimg.com/736x/97/f0/cb/97f0cb0bd91313be32a74ff14584d0f7.jpg"
+                  src={cuteGarden}
                 />
               </div>
 
@@ -66,7 +67,7 @@ const handleSignatureRequest = async () => {
         </div>
 
         <div className="text-center space-x-4 mt-6">
-          <button onClick={handleSignatureRequest} className="bg-[#8B5CF6] translate-y-1 text-[#fff] sm:text-lg text-xs font-bold py-2.5 px-6  rounded-full inline-flex items-center">
+          <button onClick={handleSignatureRequest} className="bg-[#8B5CF6] tracking-tighter translate-y-1 text-[#fff] sm:text-lg text-xs font-bold py-2.5 px-6  rounded-full inline-flex items-center">
            Sign With Tronlink
           </button>
         </div>

@@ -37,7 +37,7 @@ const LiveGardens = () => {
       <h1 className="ssm:px-44 text-center text-[#10172A] text-4xl sm:text-6xl font-semibold tracking-tighter">Explore live spaces with cute
       <span className="underline leading-8 underline-offset-8	decoration-8 decoration-[#8B5CF6]">{" "}  Gardens</span></h1>
 
-    <div className="flex flex-wrap justify-center py-8  mt-16">
+    <div className="flex flex-wrap justify-center py-8 space-x-4 mt-16">
       {gardenData.map((livegarden) => (
         <div className="bg-white shadow-md  rounded-3xl p-4">
         <div className="flex-none lg:flex">
