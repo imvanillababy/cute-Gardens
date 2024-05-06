@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import doodles from "../assets/doodles.png";
+import empty from "../assets/empty.png"
 
-const Join = ({ address }) => {
+const Join = ({ address  }) => {
   const [stream, setStream] = useState(null);
+ 
 
   const handleToggleMicrophone = async () => {
     try {
@@ -15,12 +17,15 @@ const Join = ({ address }) => {
 
   const isMicrophoneMuted = stream === null;
 
+
+
+
   return (
     <div className="rounded-xl overflow-hidden bg-white shadow-lg p-12 flex flex-col items-center">
       <div className="mb-4">
         <img
           className="w-24 h-24 rounded-full object-cover shadow-md hover:shadow-lg cursor-pointer transition transform hover:scale-105"
-          src={doodles}
+          src={empty}
           alt="Profile"
         />
       </div>
@@ -45,7 +50,7 @@ const Join = ({ address }) => {
               clipRule="evenodd"
             ></path>
           </svg>
-          <span>{isMicrophoneMuted ? "Mute" : "Unmute"}</span>
+          <span>{isMicrophoneMuted ? "Unmute" : "Mute"}</span>
         </button>
       </div>
     </div>

@@ -8,7 +8,7 @@ const Garden = ({ livegarden }) => {
       <div className="flex-none lg:flex">
         <div className=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
           <img
-            src={livegarden.url}
+            src={livegarden.selectedImage}
             alt="Just a flower"
             className=" w-full  object-scale-down lg:object-cover  lg:h-48 rounded-2xl"
           />

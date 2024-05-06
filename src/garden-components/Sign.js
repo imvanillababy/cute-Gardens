@@ -57,7 +57,7 @@ const handleSignatureRequest = async () => {
 
               
               <p className="sm:mt-8 mt-2.5 text-[#10172A] sm:px-72  sm:leading-loose text-lg font-normal tracking-tighter">
-              cuteGarden’s <span className="font-semibold">goal is to establish on-chain community rooms with a token-gated system</span>
+              cuteGarden’s <span className="font-semibold">goal is to establish on-chain community rooms with a token-gated system {""}</span>
                  <span className="font-semibold">enabling token holders to curate exclusive spaces</span> ,
  
               </p>
