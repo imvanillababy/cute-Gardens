@@ -96,14 +96,14 @@ const CreateGarden = () => {
 
 
   return (
-    <div className="bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] tracking-tighter">
+    <div className="bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] font-body ">
       <div className="flex h-screen flex-col items-center justify-center">
         <div className="max-h-auto mx-auto max-w-3xl w-full">
           <div className="mb-8 space-y-3">
-            <p className="text-4xl font-semibold tracking-tighter text-[#151e37] ">
-              Create Your Garden
+            <p className="text-4xl font-semibold font-heading  text-[#232e4d] ">
+              Lets Create Your Garden
             </p>
-            <p className="text-gray-500 tracking-tighter ">
+            <p className="text-gray-500  ">
               Enter details to start your garden.
             </p>
           </div>
@@ -111,7 +111,7 @@ const CreateGarden = () => {
             <div className="mb-10 space-y-3">
               <div className="space-y-1">
                 <label
-                  className=" text-[#151e37] sm:text-lg text-sm font-semibold tracking-tighter"
+                  className=" text-[#151e37] sm:text-lg text-sm font-semibold "
                   htmlFor="gardenName"
                 >
                   Garden Name
@@ -127,7 +127,7 @@ const CreateGarden = () => {
               </div>
               <div className="space-y-1">
                 <label
-                  className=" text-[#151e37] sm:text-lg text-sm font-semibold tracking-tighter"
+                  className=" text-[#151e37] sm:text-lg text-sm font-semibold "
                   htmlFor="gardenDescription"
                 >
                   Description
@@ -143,7 +143,7 @@ const CreateGarden = () => {
               </div>
               <div className="space-y-1">
                 <label
-                  className=" text-[#151e37] sm:text-lg text-sm font-semibold tracking-tighter"
+                  className=" text-[#151e37] sm:text-lg text-sm font-semibold "
                   htmlFor="gardenRestriction"
                 >
                   Garden Restrictions
@@ -159,7 +159,7 @@ const CreateGarden = () => {
               </div>
               <div className="space-y-1">
                 <label
-                  className=" text-[#151e37] sm:text-lg text-sm font-semibold tracking-tighter"
+                  className=" text-[#151e37] sm:text-lg text-sm font-semibold "
                   htmlFor="tokenType"
                 >
                   Gating
@@ -181,14 +181,14 @@ const CreateGarden = () => {
               {tokenType !== "open" && (
                 <div className="sace-y-1">
                   <label
-                    className=" text-[#151e37] sm:text-lg text-sm font-semibold tracking-tighter"
+                    className=" text-[#151e37] sm:text-lg text-sm font-semibold "
                     htmlFor="tokenAddress"
                   >
                     Token Address
                   </label>
                   <input
                     type="text"
-                    className="border-input placeholder:tracking-tighter bg-background rounded-md border px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+                    className="border-input placeholder: bg-background rounded-md border px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
                     id="tokenAddress"
                     placeholder="Enter token address"
                     value={tokenAddress}
@@ -198,7 +198,7 @@ const CreateGarden = () => {
               )}
               <div className="space-y-1">
                 <label
-                  className=" text-[#151e37] sm:text-lg text-sm font-semibold tracking-tighter"
+                  className=" text-[#151e37] sm:text-lg text-sm font-semibold "
                   htmlFor="gardenImage"
                 >
                   Upload Garden Image
@@ -220,7 +220,7 @@ const CreateGarden = () => {
               </div>
               <button
                 onClick={handleGardenRegistration}
-                className="rounded-md bg-[#8B5CF6] px-4 py-2  p-4 sm:text-lg text-sm font-semibold tracking-tighter text-white transition-colors  "
+                className="rounded-md bg-[#96a4ed] px-4 py-2  p-4 sm:text-lg text-sm font-semibold  text-white transition-colors  "
                 type="submit"
               >
                 Sign and Go live

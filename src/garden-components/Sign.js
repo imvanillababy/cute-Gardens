@@ -33,7 +33,7 @@ const handleSignatureRequest = async () => {
 
   return (
     <div>
-      <section className="pb-12 bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC]">
+      <section className="pb-12 bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] font-heading h-screen">
         <div className="items-center pt-12 px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
           <div className="justify-center w-full text-center lg:p-10 max-auto">
             <div className="justify-center w-full mx-auto">
@@ -44,22 +44,22 @@ const handleSignatureRequest = async () => {
                 />
               </div>
 
-              <p className="mt-4 sm:px-32 text-[#10172A] sm:text-xl text-sm font-semibold tracking-tighter">
+              <p className="mt-4 sm:px-32 text-[#283558] sm:text-xl text-sm font-normal ">
                 by @i'm VanillaBaby 🏝️
               </p>
 
-              <p className="sm:mt-8 mt-3 sm:px-44 text-[#10172A] text-4xl sm:text-6xl font-semibold tracking-tighter">
+              <p className="sm:mt-8 mt-3 sm:px-44 text-[#283558] text-4xl sm:text-6xl font-normal ">
                 Onchain{" "}
-                <span className="underline leading-8 underline-offset-8	decoration-8 decoration-[#8B5CF6]">
+                <span className="underline leading-8 underline-offset-8	decoration-8 decoration-[#a88aee]">
                   spaces
                 </span>{" "}
                 utilizing token gating method.
               </p>
 
               
-              <p className="sm:mt-8 mt-2.5 text-[#10172A] sm:px-72  sm:leading-loose text-lg font-normal tracking-tighter">
-              cuteGarden’s <span className="font-semibold">goal is to establish on-chain community rooms with a token-gated system {""}</span>
-                 <span className="font-semibold">enabling token holders to curate exclusive spaces</span> ,
+              <p className="sm:mt-8 mt-2.5 text-[#283558] sm:px-72  sm:leading-loose text-lg font-normal ">
+              cuteGarden’s <span className="font-normal">goal is to establish on-chain community rooms with a token-gated system {""}</span>
+                 <span className="font-normal">enabling token holders to curate exclusive spaces</span> ,
  
               </p>
             </div>
@@ -67,7 +67,7 @@ const handleSignatureRequest = async () => {
         </div>
 
         <div className="text-center space-x-4 mt-6">
-          <button onClick={handleSignatureRequest} className="bg-[#8B5CF6] tracking-tighter translate-y-1 text-[#fff] sm:text-lg text-xs font-bold py-2.5 px-6  rounded-full inline-flex items-center">
+          <button onClick={handleSignatureRequest} className="bg-[#96a4ed]  translate-y-1 text-[#fff] sm:text-lg text-xs font-bold py-2.5 px-6  rounded-full inline-flex items-center">
            Sign With Tronlink
           </button>
         </div>

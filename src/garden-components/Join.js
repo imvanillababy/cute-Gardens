@@ -35,7 +35,7 @@ const Join = ({ address  }) => {
           disabled={!isMicrophoneMuted}
           onClick={handleToggleMicrophone}
           className={`flex items-center justify-center w-24 h-8 rounded-full ${
-            isMicrophoneMuted ? "bg-gray-200 text-gray-700" : "bg-blue-500 text-white"
+            isMicrophoneMuted ? "bg-gray-200 text-gray-700" : "bg-[#96a4ed] text-white"
           } text-xs focus:outline-none`}
         >
           <svg

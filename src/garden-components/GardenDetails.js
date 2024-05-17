@@ -57,35 +57,11 @@ const GardenDetails = () => {
 
   return (
     <>
-      <div className="flex justify-center">
-        <div className="container mx-auto m-4 max-w-3xl w-full grid gap-4 grid-cols-1">
-          <div className="bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] p-4 rounded-2xl shadow-md hover:shadow-lg">
-            <div className="flex items-center text-gray-400">
-              <FaShare color="#8B5CF6" className="mr-2" />
-              <p className=' tracking-tighter font-semibold'>
-                You can also invite your eligible friends with a link {' '}
-              </p>
-              <button
-                type="button"
-                className="ml-auto text-xs font-medium text-gray-400 transition ease-in duration-300"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="sticky top-0 z-10 w-full">
-            <div className="bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] rounded-2xl p-4 shadow-lg">
+      <div className="flex justify-center ">
+        <div className="container font-body mx-auto m-4 max-w-3xl w-full grid gap-4 grid-cols-1">
+
+          <div className="sticky top-0 z-10 w-full bg-gradient-to-b from-[#E8E3F5] via-[#EDEAFB] to-[#F7FAFC] ">
+            <div className=" rounded-2xl p-4 shadow-lg">
               {garden.map((mygarden, index) => (
                 <div key={index} className="flex sm:flex-row items-center justify-between">
                   <div className="relative h-32 w-32 sm:mb-0 mb-3">
@@ -98,21 +74,21 @@ const GardenDetails = () => {
                   <div className="flex-auto sm:ml-5 justify-evenly">
                     <div className="flex items-center justify-between sm:mt-2">
                       <div className="flex flex-col">
-                        <div className="text-lg tracking-tighter text-[#151e37] font-bold leading-none">
+                        <div className="text-lg font-heading  text-[#151e37] font-bold leading-none">
                           {mygarden.name}
                         </div>
                         <div className="text-gray-500 my-1">
-                          <span className="mr-3 tracking-tighter text-gray-600">
+                          <span className="mr-3  text-gray-600">
                             {mygarden.restriction}
                           </span>
-                          <span className="mr-3 tracking-tighter border-r border-gray-600 max-h-0" />
-                          <span className="tracking-tighter">
+                          <span className="mr-3  border-r border-gray-600 max-h-0" />
+                          <span className="">
                             {mygarden.description}
                           </span>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between text-sm text-gray-500 tracking-tighter">
+                    <div className="flex items-center justify-between text-sm text-gray-500 ">
                       <div>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +103,7 @@ const GardenDetails = () => {
                       <div className="flex items-center"></div>
                       <button
                         onClick={JoinSpace}
-                        className="flex-no-shrink bg-[#8B5CF6] px-5 ml-4 py-2 text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 text-white rounded-full transition ease-in duration-300"
+                        className="flex-no-shrink   bg-[#96a4ed] px-5 ml-4 py-2 text-md p-6 shadow-sm hover:shadow-lg font-medium  text-white rounded-full transition ease-in duration-300"
                       >
                         {canjoin ? 'Leave' : 'Join'}
                       </button>
