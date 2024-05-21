@@ -1,9 +1,9 @@
 import React from "react";
-import Unauthorized from "./Unauthorized";
+import Unauthorized from "../garden-components/Unauthorized";
 import { useEffect, useState } from "react";
-import Join from "./Join";
+import Join from "../garden-components/Join";
 import { useParams } from "react-router-dom";
-import { db } from "./Firebase";
+import { db } from "../garden-components/Firebase";
 import { query, collection, where, getDocs } from "firebase/firestore";
 import { FaShare } from "react-icons/fa";
 

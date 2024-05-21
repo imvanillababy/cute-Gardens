@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useEffect } from "react";
 
-import { db } from "./Firebase";
+import { db } from "../garden-components/Firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-import { storage } from "./Firebase";
+import { storage } from "../garden-components/Firebase";
 import { v4 } from "uuid";
 
 const CreateGarden = () => {
